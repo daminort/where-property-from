@@ -5,34 +5,30 @@
 class Human {
     constructor(name) {
         this.name = name;
-    }
+	}
+	getName() {
+		return this.name;
+	}
 }
 
 class Man extends Human {
     constructor(name, age) {
         super(name);
         this.age = age;
-    }
+	}
+	getAge() {
+		return this.age;
+	}
 }
 
 class Student extends Man {
     constructor(name, age, subject) {
         super(name, age);
         this.subject = subject;
-    }
-}
-
-/** ------------------------------------------------------------------------------------------------------
- * Прототипы
- ------------------------------------------------------------------------------------------------------ */
-Human.prototype.getName = function() {
-    return this.name;
-}
-Man.prototype.getAge = function() {
-    return this.age;
-}
-Student.prototype.getSubject = function() {
-    return this.subject;
+	}
+	getSubject() {
+		return this.subject;
+	}
 }
 
 /** ------------------------------------------------------------------------------------------------------
